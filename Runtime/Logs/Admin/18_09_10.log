@@ -1,0 +1,749 @@
+[ 2018-09-10T11:50:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+
+[ 2018-09-10T11:50:40+08:00 ] 127.0.0.1 /Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.094076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001480s ]
+
+[ 2018-09-10T11:50:40+08:00 ] 127.0.0.1 /Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2018-09-10T11:50:40+08:00 ] 127.0.0.1 /Public/Images/login-bg-1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+
+[ 2018-09-10T11:50:40+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+
+[ 2018-09-10T11:50:53+08:00 ] 127.0.0.1 /Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `db_user` [ RunTime:0.0264s ]
+SQL: SELECT * FROM `db_user` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `status` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: UPDATE `db_user` SET `lastlogin_time`='1536551453' WHERE `id` = 1 [ RunTime:0.0029s ]
+
+[ 2018-09-10T11:50:55+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0281s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 17 行.
+SQL: SELECT b.rules FROM db_auth_group_access a LEFT JOIN db_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0285s ]
+SQL: SELECT * FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2018-09-10T11:50:55+08:00 ] 127.0.0.1 /Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2018-09-10T13:05:30+08:00 ] 127.0.0.1 /User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0132s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0075s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_user` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `db_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2018-09-10T13:05:39+08:00 ] 127.0.0.1 /AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0113s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0097s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `db_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2018-09-10T13:05:44+08:00 ] 127.0.0.1 /Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0117s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0065s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `db_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] Undefined offset: 1 D:\phpstudy\PHPTutorial\WWW\zhuowang\Runtime\Cache\Admin\db3da01c8f36ad38f6ba709720b2de06.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 D:\phpstudy\PHPTutorial\WWW\zhuowang\Runtime\Cache\Admin\db3da01c8f36ad38f6ba709720b2de06.php 第 40 行.
+NOTIC: [8] Undefined variable: page D:\phpstudy\PHPTutorial\WWW\zhuowang\Runtime\Cache\Admin\db3da01c8f36ad38f6ba709720b2de06.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2018-09-10T13:06:02+08:00 ] 127.0.0.1 /MediaManager/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0115s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0069s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0148s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,2   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0057s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0039s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0066s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2018-09-10T13:06:07+08:00 ] 127.0.0.1 /MediaManager/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0119s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0066s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 2,2   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000054s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0043s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0049s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0063s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2018-09-10T13:06:07+08:00 ] 127.0.0.1 /Public//Public/upload/2018-06-19/5b28c3511ae20.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2018-09-10T13:06:10+08:00 ] 127.0.0.1 /MediaManager/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001520s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0107s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0071s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 2,2   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0042s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0038s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0075s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2018-09-10T13:06:10+08:00 ] 127.0.0.1 /Public//Public/upload/2018-06-19/5b28c3511ae20.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+
+[ 2018-09-10T13:06:14+08:00 ] 127.0.0.1 /MediaManager/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0108s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0064s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,2   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000058s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0041s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0063s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023522s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2018-09-10T13:32:46+08:00 ] 127.0.0.1 /MediaManager/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0126s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0123s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,2   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0047s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0037s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0074s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2018-09-10T13:33:00+08:00 ] 127.0.0.1 /AuthGroup/ruleGroup/role_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0277s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0124s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `db_auth_rule` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `db_auth_group` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2018-09-10T13:33:07+08:00 ] 127.0.0.1 /AuthGroup/ruleGroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0223s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','65','57','58','59','60','61','62','63','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0123s ]
+SQL: UPDATE `db_auth_group` SET `rules`='1,2,5,6,7,8,3,9,10,11,12,4,13,14,15,16,66,67' WHERE `id` = 1 [ RunTime:0.0015s ]
+
+[ 2018-09-10T13:33:17+08:00 ] 127.0.0.1 /MediaManager/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0152s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0069s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0096s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,2   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0079s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0061s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0069s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2018-09-10T13:33:30+08:00 ] 127.0.0.1 /AuthGroup/ruleGroup/role_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0117s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `db_auth_rule` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `db_auth_group` WHERE `id` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2018-09-10T13:33:35+08:00 ] 127.0.0.1 /AuthGroup/ruleGroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0304s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0133s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0122s ]
+SQL: UPDATE `db_auth_group` SET `rules`='1,2,5,6,7,8,3,9,10,11,12,4,13,14,15,16,66,67,68,70' WHERE `id` = 1 [ RunTime:0.0016s ]
+
+[ 2018-09-10T13:33:43+08:00 ] 127.0.0.1 /MediaManager/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0302s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0177s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0132s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,2   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0054s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0035s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0074s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2018-09-10T13:33:52+08:00 ] 127.0.0.1 /MediaManager/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0115s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM db_auth_group_access a INNER JOIN db_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0073s ]
+SQL: SELECT `condition`,`menu_name` FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67','68','70') AND `type` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Controller\MediaManagerController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\zhuowang\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `db_coupon_tmp` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 2,2   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `db_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0078s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/add' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0069s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `db_auth_group` [ RunTime:0.0114s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id` FROM `db_auth_rule` WHERE `menu_name` = 'MediaManager/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `group_id` FROM `db_auth_group_access` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `rules` FROM `db_auth_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-09-10T13:33:52+08:00 ] 127.0.0.1 /Public//Public/upload/2018-06-19/5b28c3511ae20.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+
+[ 2018-09-10T16:02:36+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0144s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 17 行.
+SQL: SELECT b.rules FROM db_auth_group_access a LEFT JOIN db_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67','68','70') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2018-09-10T16:02:36+08:00 ] 127.0.0.1 /Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2018-09-10T16:12:13+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `db_auth_group_access` [ RunTime:0.0113s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\zhuowang\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 17 行.
+SQL: SELECT b.rules FROM db_auth_group_access a LEFT JOIN db_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `db_auth_rule` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `db_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','66','67','68','70') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006553s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2018-09-10T16:12:13+08:00 ] 127.0.0.1 /Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000411s ]
+

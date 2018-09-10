@@ -1,0 +1,668 @@
+[ 2018-06-20T09:38:48+08:00 ] ::1 /guang/xindai/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.120007s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.120007s ]
+
+[ 2018-06-20T09:38:48+08:00 ] ::1 /guang/xindai/index.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Login/login' AND `status` = 1 LIMIT 1   [ RunTime:0.0090s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.143008s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.143008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T09:38:50+08:00 ] ::1 /guang/xindai/Public/Images/login-bg-1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-06-20T09:38:50+08:00 ] ::1 /guang/xindai/index.php/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Login/verify' AND `status` = 1 LIMIT 1   [ RunTime:0.0880s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.228013s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.228013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T09:38:57+08:00 ] ::1 /guang/xindai/index.php/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Login/doLogin' AND `status` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.088005s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.088005s ]
+SQL: SHOW COLUMNS FROM `zy_user` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `zy_user` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `status` = 1 LIMIT 1   [ RunTime:0.0080s ]
+SQL: UPDATE `zy_user` SET `lastlogin_time`='1529458737' WHERE `id` = 1 [ RunTime:0.0110s ]
+
+[ 2018-06-20T09:38:58+08:00 ] ::1 /guang/xindai/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0070s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.091005s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.091005s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0080s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 18 行.
+SQL: SELECT b.rules FROM zy_auth_group_access a LEFT JOIN zy_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-06-20T09:38:58+08:00 ] ::1 /guang/xindai/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0110s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.132007s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.133007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-06-20T09:39:03+08:00 ] ::1 /guang/xindai/index.php/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Coupon/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0100s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.140008s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.140008s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0220s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,5   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T10:29:50+08:00 ] ::1 /guang/xindai/index.php/admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0060s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.074004s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.074004s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0090s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 18 行.
+SQL: SELECT b.rules FROM zy_auth_group_access a LEFT JOIN zy_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T10:29:50+08:00 ] ::1 /guang/xindai/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0080s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:0.114006s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.115006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T10:46:47+08:00 ] ::1 /guang/xindai/index.php/admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.6510s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.1240s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:2.116121s ]
+INFO: [ action_begin ] --END-- [ RunTime:2.117122s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0110s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 18 行.
+SQL: SELECT b.rules FROM zy_auth_group_access a LEFT JOIN zy_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-06-20T10:46:49+08:00 ] ::1 /guang/xindai/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.1500s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.2220s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.148066s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.148066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-06-20T11:05:06+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0380s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0230s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,5   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.1110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-06-20T11:09:06+08:00 ] ::1 /guang/xindai/index.php/admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0130s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 18 行.
+SQL: SELECT b.rules FROM zy_auth_group_access a LEFT JOIN zy_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-06-20T11:09:06+08:00 ] ::1 /guang/xindai/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2018-06-20T11:09:10+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0230s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,5   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined index: mstyle) D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 38 行.
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T11:11:00+08:00 ] ::1 /guang/xindai/index.php/admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0600s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 18 行.
+SQL: SELECT b.rules FROM zy_auth_group_access a LEFT JOIN zy_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-06-20T11:11:00+08:00 ] ::1 /guang/xindai/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2018-06-20T11:11:03+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,5   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-06-20T11:13:16+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.2560s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0180s ]
+NOTIC: [8] Undefined index: mcontent D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T11:13:37+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0770s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0370s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.1040s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0830s ]
+SQL: INSERT INTO `zy_coupon_tmp` (`mtitle`,`val`,`mstyle`) VALUES ('wahaha','7','upload/2018-06-20/5b29c660c1756.jpg') [ RunTime:0.1320s ]
+
+[ 2018-06-20T11:13:38+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.1290s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.2220s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0480s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0150s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0350s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\CouponModel.class.php 第 12 行.
+SQL: SELECT * FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 0,5   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T11:13:45+08:00 ] ::1 /guang/xindai/index.php/Admin/Coupon/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0070s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0100s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\CouponController.class.php on line 15 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_coupon_tmp` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 5,5   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_coupon_tmp` WHERE ( isdel=0 ) LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\8686936d28a6b3e64b15b96c436d7ec4.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-06-20T11:42:14+08:00 ] ::1 /guang/xindai/index.php/Admin/Operating/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM zy_auth_group_access a INNER JOIN zy_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`menu_name` FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `type` = 1 AND `status` = 1  [ RunTime:0.0180s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Controller\OperatingController.class.php on line 14 and defined D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\phpstudy\PHPTutorial\WWW\guang\xindai\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `zy_operating` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: p D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\OperatingModel.class.php 第 9 行.
+NOTIC: [8] Undefined index: id D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\OperatingModel.class.php 第 10 行.
+NOTIC: [8] Undefined index: mtitle D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\OperatingModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: location D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\OperatingModel.class.php 第 12 行.
+SQL: SELECT * FROM `zy_operating` ORDER BY location asc,msort asc LIMIT 0,5   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zy_operating` LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: show D:\phpstudy\PHPTutorial\WWW\guang\xindai\Runtime\Cache\Admin\d99c67c8cdd61a3ab65d4b7d87dbf049.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-06-20T11:48:31+08:00 ] ::1 /guang/xindai/index.php/admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zy_auth_group_access` [ RunTime:0.0070s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' D:\phpstudy\PHPTutorial\WWW\guang\xindai\Apps\Admin\Model\AuthGroupAccessModel.class.php 第 18 行.
+SQL: SELECT b.rules FROM zy_auth_group_access a LEFT JOIN zy_auth_group b ON b.id=a.group_id  WHERE a.uid = '1'  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zy_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `zy_auth_rule` WHERE `id` IN ('1','2','5','6','7','8','3','9','10','11','12','4','13','14','15','16','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-06-20T11:48:31+08:00 ] ::1 /guang/xindai/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
