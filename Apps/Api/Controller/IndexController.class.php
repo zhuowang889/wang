@@ -17,8 +17,20 @@ class IndexController extends Controller {
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     	curl_setopt($ch, CURLOPT_HEADER, 0);
     	$output = curl_exec($ch);
-    	var_dump($output);die;
+    	//var_dump($output);die;
     	curl_close($ch);
+    	$arr = json_decode($output,true);
+    	$html = $arr[$prefix.'0']['html'];
+    	//echo $html;
+    	$matches = [];
+    	if(preg_match("/href='([^']+)'.+?src='([^']+)'.+?src='([^']+)'/", $html, $matches)){
+    	    $arr[$prefix.'0']['url'] = $matches[1];
+    	    $arr[$prefix.'0']['img1'] = $matches[2];
+    	    $arr[$prefix.'0']['img2'] = $matches[3];
+    	    unset($arr[$prefix.'0']['html']);
+    	    $output = json_encode($arr);
+    	}
+    	print_r($arr);
     	return $output;
     }
 }
