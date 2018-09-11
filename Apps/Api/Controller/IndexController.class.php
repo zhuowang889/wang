@@ -33,4 +33,37 @@ class IndexController extends Controller {
     	print_r($arr);
     	return $output;
     }
+    public function dhtml()
+    {
+        $params = array('zoneid'=>9,
+            'layerstyle'=>'geocities',
+            'align'=>'right',
+            'padding'=>2,
+            'closetext'=>'%5BClose%5D'
+        );
+        $queryParams = http_build_query($params);
+        $url = 'http://101.132.106.202/www/delivery/al.php?'.$queryParams;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        //echo $output;
+        $pattern = '/td\s+width=\\\"(?P<width>\d+)\\\"\s+height=\\\"(?P<height>\d+)';
+        $pattern .= ".+?href=\\\'(?P<ckStatistics>[^']+)\\\'.+?src=\\\'(?P<img>[^']+)\\\'.+?src=\\\'(?P<showStatistics>[^']+)\\\'/";
+        //.+?src='([^']+)'
+        $matches = [];
+        if(preg_match($pattern, $output, $matches)){
+            $rs = array('width'=>$matches['width'],
+                'height'=>$matches['height'],
+                'ckStatisticsUrl'=>$matches['ckStatistics'],
+                'img'=>$matches['img'],
+                'showStatisticsUrl'=>$matches['showStatistics']
+            );
+            print_r($rs);
+            return $rs;
+        }
+        return $output;
+    }
 }
