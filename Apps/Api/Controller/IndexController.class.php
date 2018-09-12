@@ -66,6 +66,7 @@ class IndexController extends Controller {
                 'img'=>$matches['img'],
                 'showStatisticsUrl'=>$matches['showStatistics']
             );
+            echo "<pre/>";
             print_r($rs);
             return $rs;
         }
@@ -100,10 +101,10 @@ class IndexController extends Controller {
             'title' => $arr['AdTitle'],
             'description' => $arr['Description'],
             'impressionUrl' => $arr['Impression']['URL'],
-            'videoDuration' => $arr['Duration'],
-            'videoAdId' => $arr['AdId'],
+            //'videoDuration' => $arr['Duration'],
+            //'videoAdId' => $arr['AdId'],
             'videoClickThroughUrl' => $arr['Video']['VideoClicks']['ClickThrough']['URL'],
-            'videoAttrDelivery' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['delivery'],
+            //'videoAttrDelivery' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['delivery'],
             'videoAttrBitrate' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['bitrate'],
             'videoAttrWidth' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['width'],
             'videoAttrHeight' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['height'],
@@ -122,9 +123,41 @@ class IndexController extends Controller {
             'trackingEventUrlUnmute' => $arr['TrackingEvents']['Tracking']['10']['URL'],
             'trackingEventUrlResume' => $arr['TrackingEvents']['Tracking']['11']['URL'],
         );
+        echo "<pre/>";
         print_r($rsArr);exit;
         $rsJson = json_encode($rsArr);
         return $rsJson;
+    }
+    /**
+     * @desc 悬浮视频素材广告
+     * @return json
+     */
+    public function suVideo(){
+    	$zone_id = I('get.zone_id');
+    	//正式部署要删除下面的变量
+    	$zone_id = 12;
+    	$params = array(
+    			'script'=>'bannerTypeHtml:vastInlineBannerTypeHtml:vastInlineHtml',
+    			'format'=>'vast',
+    			'nz'=>1,
+    			'zones'=>'pre-roll='.$zone_id,
+    	);
+    	$queryParams = http_build_query($params);
+    	$queryParams = str_replace('%3A', ':', $queryParams);
+    	$url = $this->adServerUrl.'/delivery/fc.php?'.$queryParams;
+    	$ch = curl_init();
+    	curl_setopt($ch, CURLOPT_URL, $url);
+    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    	curl_setopt($ch, CURLOPT_HEADER, 0);
+    	$output = curl_exec($ch);
+    	curl_close($ch);
+    	$val = json_decode(json_encode(simplexml_load_string($output, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+    	$arr['title'] = $val['Ad']['InLine']['AdTitle'];
+    	$arr['impression_url'] = $val['Ad']['InLine']['Impression']['URL'];
+    	$arr['adImg'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['@attributes'];
+    	$arr['adImg_url'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['URL'];
+    	$arr['click'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['NonLinearClickThrough']['URL'];
+    	return json_encode($arr);
     }
     //接口请求广告
     public function text()
