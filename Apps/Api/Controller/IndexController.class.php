@@ -3,6 +3,7 @@ namespace Api\Controller;
 use Think\Controller;
 
 class IndexController extends Controller {
+    public $adServerUrl = 'http://101.132.106.202/www';
 	//接口请求广告
     public function index()
     {
@@ -11,7 +12,7 @@ class IndexController extends Controller {
     	$loc = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     	$referer = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     	
-    	$url ='http://101.132.106.202/www/delivery/asyncspc.php?zones='.$zones.'&prefix='.$prefix.'&loc='.$loc.'&referer='.$referer;
+    	$url = $this->adServerUrl.'/delivery/asyncspc.php?zones='.$zones.'&prefix='.$prefix.'&loc='.$loc.'&referer='.$referer;
     	$ch = curl_init();
     	curl_setopt($ch, CURLOPT_URL, $url);
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -33,7 +34,11 @@ class IndexController extends Controller {
     	print_r($arr);
     	return $output;
     }
-    public function dhtml()
+    /**
+     * DHTML广告
+     * @return mixed[]|mixed
+     */
+    public function dhtmlAd()
     {
         $params = array('zoneid'=>9,
             'layerstyle'=>'geocities',
@@ -42,7 +47,7 @@ class IndexController extends Controller {
             'closetext'=>'%5BClose%5D'
         );
         $queryParams = http_build_query($params);
-        $url = 'http://101.132.106.202/www/delivery/al.php?'.$queryParams;
+        $url = $this->adServerUrl.'/delivery/al.php?'.$queryParams;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -66,4 +71,38 @@ class IndexController extends Controller {
         }
         return $output;
     }
+    /**
+     * @desc 视频广告
+     * @return mixed[]|mixed
+     */
+    public function video()
+    {
+        $params = array(
+            'script'=>'bannerTypeHtml:vastInlineBannerTypeHtml:vastInlineHtml',
+            'format'=>'vast',
+            'nz'=>1,
+            'zones'=>'pre-roll=13'
+        );
+        $queryParams = http_build_query($params);
+        $queryParams = str_replace('%3A', ':', $queryParams);
+        $url = $this->adServerUrl.'/delivery/fc.php?'.$queryParams;
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        $output = curl_exec($ch);
+        curl_close($ch);
+        $object = simplexml_load_string($output);
+        echo $object->Ad->Inline->Impression;
+        $rsJson = json_encode(\xml2array($object));
+        echo <<<EOT
+<script>
+var mystr = '{$rsJson}',
+myjson = JSON.parse(mystr);
+</script>
+EOT;
+        print_r($object);exit;
+        return $output;
+    }
+    
 }
