@@ -93,6 +93,9 @@ class IndexController extends Controller {
         $output = curl_exec($ch);
         curl_close($ch);
         $object = simplexml_load_string($output);
+        $val = json_decode(json_encode(simplexml_load_string($output, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+        echo "<pre/>";
+        var_dump($val);die;
         echo $object->Ad->Inline->Impression;
         $rsJson = json_encode(\xml2array($object));
         echo <<<EOT
