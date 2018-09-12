@@ -101,8 +101,8 @@ class IndexController extends Controller {
             'title' => $arr['AdTitle'],
             'description' => $arr['Description'],
             'impressionUrl' => $arr['Impression']['URL'],
-            //'videoDuration' => $arr['Duration'],
-            //'videoAdId' => $arr['AdId'],
+            'videoDuration' => $arr['Video']['Duration'],
+            //'videoAdId' => $arr['Video']['AdId'],
             'videoClickThroughUrl' => $arr['Video']['VideoClicks']['ClickThrough']['URL'],
             //'videoAttrDelivery' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['delivery'],
             'videoAttrBitrate' => $arr['Video']['MediaFiles']['MediaFile']['@attributes']['bitrate'],
@@ -173,26 +173,22 @@ class IndexController extends Controller {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         $output = curl_exec($ch);
-        echo $output;die;
         curl_close($ch);
         $arr = json_decode($output,true);
         $html = $arr[$prefix.'0']['html'];
         //echo $html;
-       // $matches = [];
+        $matches = [];
         
-/*         if(preg_match("/href='([^']+)'.+?src='([^']+)'.+?src='([^']+)/", $html, $matches)){
-            var_dump($matches);exit;
-            $arr[$prefix.'0']['url'] = $matches[1];
-            $arr[$prefix.'0']['text'] = $matches[2];
-            $arr[$prefix.'0']['showStatisticsUrl'] = $matches[3];
+        if(preg_match("/href='(?P<ckStatistics>[^']+)'.+?>(?P<text>[^<]+).+?src='(?P<showStatistics>[^']+)/", $html, $matches)){
+            $arr[$prefix.'0']['ckStatistics'] = $matches['ckStatistics'];
+            $arr[$prefix.'0']['text'] = $matches['text'];
+            $arr[$prefix.'0']['showStatisticsUrl'] = $matches['showStatistics'];
             unset($arr[$prefix.'0']['html']);
             $output = json_encode($arr);
         }
-        print_r($arr); */
+        print_r($arr);
+        echo "<pre/>";
         return $output;
     }
-    /*
-     * //href='([^']+)'.+?>(.+?)<\\\a>.+?src='([^']+)'.+?src='([^']+)'
-     * */
     
 }
