@@ -168,7 +168,7 @@ class IndexController extends Controller {
     	//var_dump(json_encode($arr));
     	return json_encode($arr);
     }
-    //接口请求广告
+    //接口请求文字广告
     public function text()
     {
     	$zones = I('get.zoneId');
@@ -205,7 +205,33 @@ class IndexController extends Controller {
     //回调接口
     function callBack(){
     	$param = I('post.callBackParam');
-    	$param = 'http://localhost:8000/www/delivery/lg.php?bannerid=2&campaignid=2&zoneid=2&loc=http%3A%2F%2Flocalhost%2Fdemo.html&cb=dcf03d82cc';
-    	echo "<img src='$param' width='0' height='0' alt='' style='width: 0px; height: 0px;'>";
+    	$token = I('post.token');
+    	$header = array("x-access-token:$token");
+    	$header = array("x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViOWI0OTA2ZWI5MjAwNTg4MGUyMGNkZiIsImlhdCI6MTUzNzI1NzAwOSwiZXhwIjoxNTM3MjYwNjA5fQ.OMOxUqmvysdfnZn22MHqn2wH4LJVzzyRMG7fZLH8k1k");
+    	//测试地址
+    	$url = 'http://101.132.158.59:3000/token_api/validate_token';
+    	$outPut = $this->httpPost($url,$header);
+    	$res = json_decode($outPut,true);
+    	if($res['code']===1){
+    		$param = 'http://localhost:8000/www/delivery/lg.php?bannerid=2&campaignid=2&zoneid=2&loc=http%3A%2F%2Flocalhost%2Fdemo.html&cb=dcf03d82cc';
+    		echo "<img src='$param' width='0' height='0' alt='' style='width: 0px; height: 0px;'>";
+    		die;
+    	}else{
+    		$msg = array('code'=>0,'msg'=>'无效token');
+    		return $msg;
+    	}
+    }
+    //post请求
+	function httpPost($url='',$header=''){
+        $ch=curl_init($url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch,CURLOPT_POST,1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+        $data=curl_exec($ch);
+        curl_close($ch);
+        return $data;
     }
 }
