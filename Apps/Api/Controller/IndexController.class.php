@@ -32,11 +32,8 @@ class IndexController extends Controller {
     	    $res['callBackParam'] = $matches[3];
     	    $res['width'] = $arr[$prefix.'0']['width'];
     	    $res['height'] = $arr[$prefix.'0']['height'];
-    	}
-    	/* echo "<pre/>";
-    	var_dump($res); */
+    	} 
     	echo json_encode($res);
-    	return json_encode($res);
     }
     /**
      * DHTML广告
@@ -75,8 +72,7 @@ class IndexController extends Controller {
         }
         //echo "<pre/>";
        // var_dump($rs);
-        //echo json_encode($rs);
-        return json_encode($rs);
+        echo json_encode($rs);
     }
     /**
      * @desc 视频广告
@@ -133,7 +129,6 @@ class IndexController extends Controller {
         //print_r($rsArr);exit;
         $rsJson = json_encode($rsArr);
         echo $rsJson;
-        return $rsJson;
     }
     /**
      * @desc 悬浮视频素材广告
@@ -165,8 +160,7 @@ class IndexController extends Controller {
     	$arr['img_url'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['URL'];
     	$arr['clickUrl'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['NonLinearClickThrough']['URL'];
     	//echo "<pre/>";
-    	//var_dump(json_encode($arr));
-    	return json_encode($arr);
+    	echo json_encode($arr);
     }
     //接口请求文字广告
     public function text()
@@ -199,26 +193,26 @@ class IndexController extends Controller {
         $res['width'] = $arr[$prefix.'0']['width'];
         $res['height'] = $arr[$prefix.'0']['height'];
         //echo "<pre/>";
-        var_dump(json_encode($res));
-        return json_encode($res);
+        echo json_encode($res);
     }
     //回调接口
     function callBack(){
     	$param = I('post.callBackParam');
     	$token = I('post.token');
     	$header = array("x-access-token:$token");
-    	$header = array("x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViOWI0OTA2ZWI5MjAwNTg4MGUyMGNkZiIsImlhdCI6MTUzNzI1NzAwOSwiZXhwIjoxNTM3MjYwNjA5fQ.OMOxUqmvysdfnZn22MHqn2wH4LJVzzyRMG7fZLH8k1k");
+    	$header = array("x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViOWI0OTA2ZWI5MjAwNTg4MGUyMGNkZiIsImlhdCI6MTUzNzI2MjI4OSwiZXhwIjoxNTM3MjY1ODg5fQ.GRizHT0uQKBsYz-UGGf67YrNl1ZQcQbyg__dIIE7o0Q");
     	//测试地址
     	$url = 'http://101.132.158.59:3000/token_api/validate_token';
     	$outPut = $this->httpPost($url,$header);
     	$res = json_decode($outPut,true);
     	if($res['code']===1){
     		$param = 'http://localhost:8000/www/delivery/lg.php?bannerid=2&campaignid=2&zoneid=2&loc=http%3A%2F%2Flocalhost%2Fdemo.html&cb=dcf03d82cc';
-    		echo "<img src='$param' width='0' height='0' alt='' style='width: 0px; height: 0px;'>";
-    		die;
+    		$this->imgGet($param);
+    		$msg = array('code'=>1,'msg'=>'回调成功');
+    		echo json_encode($msg);die;
     	}else{
     		$msg = array('code'=>0,'msg'=>'无效token');
-    		return $msg;
+    		echo json_encode($msg);
     	}
     }
     //post请求
@@ -230,8 +224,20 @@ class IndexController extends Controller {
         curl_setopt($ch, CURLOPT_TIMEOUT, 5);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-        $data=curl_exec($ch);
+        $data = curl_exec($ch);
         curl_close($ch);
         return $data;
+    }
+    function imgGet($param=''){
+    	$header = array("Accept: image/webp,image/apng,image/*,*/*;q=0.8");
+    	$ch=curl_init($param);
+    	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+    	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+    	curl_setopt($ch,CURLOPT_POST,0);
+    	curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+    	$res = curl_exec($ch);
+    	curl_close($ch);
     }
 }
