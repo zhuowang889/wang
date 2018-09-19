@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>广告位置管理</title>
+		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="__PUBLIC__/css/global.css" media="all">
+		<link rel="stylesheet" href="__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css">
+		<script type="text/javascript" src="__PUBLIC__/plugins/picker/WdatePicker.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="admin-main">
+		<if condition="showButton('MediaManager/add')">
+		
+		<blockquote class="layui-elem-quote">
+		<a href="{:U('MediaManager/add')}">
+				<button  class="layui-btn layui-btn-small add">
+					<i class="layui-icon">&#xe608;</i> 添加媒体数据
+				</button>
+				</a>
+			</blockquote>
+			
+			</if>
+			<fieldset class="layui-elem-field">
+				<table class="layui-table">
+					  <thead>
+					    <tr>
+					      <th>媒体ID</th>
+					      <th>媒体名称</th>
+					      <th>媒体网址</th>
+					      <th>描述</th>
+					      <?php if(showButton('MediaManager/edit')){ ?>
+					      <th>操作</th>
+					      <?php }?>
+					    </tr> 
+					  </thead>
+					  <tbody>
+						<foreach name="list" key="k" item="vo">
+						    <tr>
+						      <td>{$vo.id}</td>
+						      <td>{$vo.mtitle}</td>
+						      <td>{$vo.val}</td>
+						      <td><img width="50px" height="50px" src="__PUBLIC__/<?php echo $vo['mstyle'];?>"></td>
+						      <td>
+						      <if condition="showButton('MediaManager/edit')">
+						      <a href="{:U('Admin/MediaManager/edit/id/'.$vo['id'].'/p/'.I('get.p'))}"><button class="layui-btn">编辑</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+						      </if>
+						    </tr>
+						</foreach>
+					  </tbody>
+				</table>
+				</div>
+			</fieldset>
+			<div class="admin-table-page">
+				<div id="page" class="page">
+				<center>{$page}</center>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="__PUBLIC__/plugins/layui/layui.js"></script>
+	
+	<?php session('upmsg',null);?>
+	<?php session('downmsg',null);?>
+</html>
