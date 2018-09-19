@@ -211,8 +211,7 @@ class IndexController extends Controller {
         $res['clikcUrl'] = $arr[$prefix.'0']['ckStatistics'] = $arr[$prefix.'0']['ckStatistics'];
         $res['callBackParam'] = $arr[$prefix.'0']['showStatisticsUrl'];
         $res['text'] = $arr[$prefix.'0']['text'];
-        $res['width'] = $arr[$prefix.'0']['width'];
-        $res['height'] = $arr[$prefix.'0']['height'];
+        $res['length'] = mb_strlen($res['text'], 'utf8');
         //echo "<pre/>";
         if($res){
             echo json_encode($res);
