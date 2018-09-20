@@ -1,5 +1,5 @@
 <?php
-namespace Admin\Controller;
+namespace Sso\Controller;
 
 class MenuController extends CommonController
 {
