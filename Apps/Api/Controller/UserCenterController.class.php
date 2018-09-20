@@ -67,5 +67,19 @@ class UserCenterController extends Controller {
             res(0, '未登录或过期');
         }
     }
+    /**
+     * user 退出
+     */
+    public function loginOut() {
+        //模拟数据，待删除
+        $_POST = ['u'=>'a7d0e7a977'];
+        $SSOkey = I('post.u', '', 'trim');
+        
+        if(S($SSOkey, NULL, ['data_cache_prifix'=>$this->adminModel->get('SSOpre')])){
+            res(1, '退出成功');
+        }else{
+            res(0, '退出失败');
+        }
+    }
 
 }
