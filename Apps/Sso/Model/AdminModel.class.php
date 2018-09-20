@@ -4,8 +4,39 @@ namespace Sso\Model;
 class AdminModel extends BaseModel
 {
 	protected $tableName = 'admin';
-    //protected $trueTableName = 'xdy_user';
     
+	/**
+	 * @desc 单个用户查询
+	 * @author zcj
+	 * @time 2018.9.19
+	 */  
+	public function singleUser($userId){
+		$where = [];
+		$where['id'] = array('eq',$userId);
+		$where['status'] = array('neq',2);
+		$userInfo = $this->where($where)->select();
+		$arr = [];
+		$arr['list'] = $userInfo;
+		return $arr;
+	}
+	/**
+	 * @desc 完善用户资料
+	 * @author zcj
+	 * @time 2018.9.20
+	 */
+	public function perfectInfor()
+	{
+		$data = [];
+		$where = [];
+		$data['phone'] = I('post.phone')?I('post.phone'):'0';
+		$data['email'] = I('post.email')?I('post.email'):'无';
+		$data['addr'] = I('post.addr')?I('post.addr'):'无';
+		$data['gender'] = I('post.sex')==1?1:0;
+		$where['id'] = I('post.id');
+		$data['intro'] = I('post.intro')?I('post.intro'):'这个家伙很懒,什么也没有留下';
+		$res = $this->where($where)->save($data);
+		return $res;
+	}
     /**
      * @description:查询用户
      * @author wuyanwen(2016年11月22日)

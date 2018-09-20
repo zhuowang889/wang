@@ -6,6 +6,17 @@ class AuthGroupAccessModel extends BaseModel
     protected $tableName = 'auth_group_access';
     
     /**
+     * @desc 判断用户是否为超级用户
+     * @author zcj
+     * @time 2018.9.19
+     */
+    public function checkUser($userId)
+    {
+    	$groupId = $this->where(['uid'=>$userId])->getField('group_id');
+    	return $groupId;
+    }
+    
+    /**
      * 获取用户所有权限
      * @author luduoliang <luduoliang@imohoo.com> (2016/12/02)
      */

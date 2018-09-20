@@ -35,7 +35,6 @@ class LoginController extends Controller {
         if(!$verify->check($captcha, '')){
             $this->ajaxReturn(array('status'=>1,'msg'=>'验证码不正确，请重新输入！'));
         }
-        /* @var $admin_user_model \Admin\Model\UserModel */
         $admin_user_model = D("Admin");
         $user_info = $admin_user_model->findUser($name, $pwd);
         
@@ -44,6 +43,8 @@ class LoginController extends Controller {
         }
         
         $admin_user_model->updateLoginTime($user_info['id']);
+        //为单点登录保存cookie
+        
         session('user_info', $user_info);
         $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！'));
         

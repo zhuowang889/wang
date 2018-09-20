@@ -1,5 +1,5 @@
 <?php
-namespace Admin\Controller;
+namespace Sso\Controller;
 
 class UserController extends CommonController
 {
@@ -9,7 +9,7 @@ class UserController extends CommonController
     {
         parent::__construct();
         /* @var $admin_user_model \Admin\Model\UserModel */
-        $admin_user_model = D('User');
+        $admin_user_model = D('Admin');
 
         $this->admin_user_model = $admin_user_model;
     }
@@ -84,8 +84,6 @@ class UserController extends CommonController
             $this->display();
         }
     }
-    
-    
     /**
      * @description:删除用户
      * @author wuyanwen(2016年12月1日)
@@ -101,5 +99,28 @@ class UserController extends CommonController
         }else{
             $this->ajaxError("删除失败");
         }
+    }
+    /**
+     * @desc 更新用户资料页展示
+     * @author zcj
+     * @time 2018.9.19
+     */
+    public function userFile(){
+    	$id = I('get.id');
+    	$this->assign('id',$id);
+    	$this->display();
+    }
+    /**
+     * @desc 对实际提交数据进行更新
+     * @author zcj
+     * @time 2018.9.20
+     */
+    public function updateUserFile(){
+    	$res = $this->admin_user_model->perfectInfor();
+    	if($res===false){
+    		$this->ajaxReturn("更新失败");
+    	}else{
+    		$this->ajaxReturn("更新成功");
+    	}
     }
 }
