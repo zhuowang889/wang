@@ -18,7 +18,7 @@ class UserCenterController extends Controller {
     {
     	//如果用户已登录, 则直接读取cookie,发送用户数据,这种方法是否有问题有待验证
     	if(cookie('ssouser')){
-    		echo $k = cookie('ssouser');
+    		$k = cookie('ssouser');
     		echo json_encode(S($k));
 			die;
     	}
