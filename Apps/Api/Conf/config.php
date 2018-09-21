@@ -1,11 +1,19 @@
 <?php
 return array(
     'CONSOLE_PAGE_NUM'=>'20',
+    /*数据库设置*/
     'DB_PREFIX'=>'zw_',
     'DB_TYPE'=>'mysql',
     'DB_USER'=>'root',
     'DB_PWD'=>'123456',
     'DB_PORT'=>'3306',
     'DB_NAME'=>'sso',
-    'DB_CHARSET'=>'utf8'
+    'DB_CHARSET'=>'utf8',
+    /*数据缓存设置*/
+    'DATA_CACHE_TYPE'=>'Redis',
+    'REDIS_RW_SEPARATE'=>false,
+    'REDIS_HOST'=>'127.0.0.1',
+    'REDIS_TIME'=>'300',
+    'REDIS_PERSISTENT'=>false,
+    'REDIS_AUTH'=>'',
 );
