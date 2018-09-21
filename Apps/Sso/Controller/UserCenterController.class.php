@@ -1,7 +1,11 @@
 <?php
 namespace Sso\Controller;
-
-class UserController extends CommonController
+/**
+ * @desc 用户中心
+ * @author zcj
+ * @time 2018.9.19
+ */
+class UserCenterController extends CommonController
 {
     protected $admin_user_model;
     
@@ -20,10 +24,19 @@ class UserController extends CommonController
      */
     public function index()
     {
-        $user_info = $this->admin_user_model->selectAllUser();
-        
-        $this->assign('user_info',$user_info['list']);
-        $this->assign('page',$user_info['page']);
+    	$userInfo = session('user_info');
+    	//判断用户是否为超级用户
+    	$userId = $userInfo['id'];
+    	//$userId = 3;
+    	$groupId = D('AuthGroupAccess')->checkUser($userId);
+    	if($groupId==1){//超级用户
+        	$user_info = $this->admin_user_model->selectAllUser();
+        	$this->assign('user_info',$user_info['list']);
+        	$this->assign('page',$user_info['page']);
+    	}else{//非超级用户
+    		$user_info = $this->admin_user_model->singleUser($userId);
+    		$this->assign('user_info',$user_info['list']);
+    	}
         $this->display();
     }
     
@@ -84,6 +97,8 @@ class UserController extends CommonController
             $this->display();
         }
     }
+    
+    
     /**
      * @description:删除用户
      * @author wuyanwen(2016年12月1日)
@@ -99,30 +114,5 @@ class UserController extends CommonController
         }else{
             $this->ajaxError("删除失败");
         }
-    }
-    /**
-     * @desc 更新用户资料页展示
-     * @author zcj
-     * @time 2018.9.19
-     */
-    public function userFile(){
-    	$id = I('get.id');
-    	$info = $this->admin_user_model->findAdminUserById($id);
-    	$this->assign('id',$id);
-    	$this->assign('info',$info);
-    	$this->display();
-    }
-    /**
-     * @desc 对实际提交数据进行更新
-     * @author zcj
-     * @time 2018.9.20
-     */
-    public function updateUserFile(){
-    	$res = $this->admin_user_model->perfectInfor();
-    	if($res===false){
-    		$this->ajaxReturn("更新失败");
-    	}else{
-    		$this->ajaxReturn("更新成功");
-    	}
     }
 }
