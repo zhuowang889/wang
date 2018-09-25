@@ -54,13 +54,11 @@ class AdminModel extends Model{
      */
     public function setUserSSO(int $uid){
         $user_name = $this->getUserinfo($uid, 'user_name');
-        
         $key = $this->getSSOkey($user_name, $uid);
         $res = json_encode(array('id'=>$uid, 'user_name'=>$user_name));
         if(S($key, $res, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre])){
         	//后期加上的cookie,完善单点登录
         	cookie('ssouser',$key,0);
-        	//cookie end
             return $key;
         }else{
             return false;
@@ -74,6 +72,7 @@ class AdminModel extends Model{
      * @return string
      */
     private function getSSOkey($user_name, $uid){
+    	//echo $user_name,$uid;die;
         return substr(md5($user_name.'_'.$uid), 0, 10);
     }
 

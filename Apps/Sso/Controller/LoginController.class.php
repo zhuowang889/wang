@@ -6,7 +6,7 @@ class LoginController extends Controller {
     
     /**
      * 登录页面显示
-     * @author zcj
+     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
      */
     public function login()
     {
@@ -15,7 +15,7 @@ class LoginController extends Controller {
     
     /**
      * 登录操作
-     * @author zcj
+     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
      */
     public function doLogin()
     {
@@ -35,6 +35,7 @@ class LoginController extends Controller {
         if(!$verify->check($captcha, '')){
             $this->ajaxReturn(array('status'=>1,'msg'=>'验证码不正确，请重新输入！'));
         }
+        /* @var $admin_user_model \Admin\Model\UserModel */
         $admin_user_model = D("Admin");
         $user_info = $admin_user_model->findUser($name, $pwd);
         
@@ -43,16 +44,20 @@ class LoginController extends Controller {
         }
         
         $admin_user_model->updateLoginTime($user_info['id']);
-        //为单点登录保存cookie
-        
         session('user_info', $user_info);
+        //sso start
+        $url = 'http://localhost:8009/Api/userCenter/index.html';
+        //m作为用户中心的专用标志,认为规定
+        $param = ['user_name'=>$name,'password'=>$pwd,'m'=>'mark'];
+        $res = $this->post($url, $param);
+        //sso end
         $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！'));
         
     }
     
     /**
      * 生成验证码
-     * @author zcj
+     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
      */
     public function verify()
     {
@@ -69,12 +74,32 @@ class LoginController extends Controller {
     
     /**
      * 退出登录
-     * @author zcj
+     * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)
      */
     public function logout()
     {
         session_unset();
         session_destroy();
         $this->redirect('Login/login');
+    }
+    
+    /**
+     * @desc post请求接口
+     * @param string $url
+     * @param string $param
+     * @return boolean|mixed
+     */
+    function post($url = '', $param = '') {
+    	$postUrl = $url;
+    	$curlPost = $param;
+    	$ch = curl_init();//初始化curl
+    	curl_setopt($ch, CURLOPT_URL,$postUrl);
+    	//curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
+    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    	curl_setopt($ch, CURLOPT_POST, 1);
+    	curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
+    	$data = curl_exec($ch);
+    	curl_close($ch);
+    	return $data;
     }
 }
