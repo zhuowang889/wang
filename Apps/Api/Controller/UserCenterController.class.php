@@ -16,14 +16,8 @@ class UserCenterController extends Controller {
 	 */
     public function index()
     {
-    	//如果用户已登录, 则直接读取cookie,发送用户数据,这种方法是否有问题有待验证
-    	if(cookie('ssouser')){
-    		$k = cookie('ssouser');
-    		echo json_encode(S($k));
-			die;
-    	}
         //模拟数据，待删除
-        $_POST = ['user_name'=>'admin', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
+        //$_POST = ['user_name'=>'admin', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
     	$referer = I('post.referer', '', 'trim');
     	if($uid = $this->adminModel->checkPassword()){
     	    $status = $this->adminModel->getUserinfo($uid, 'status');
@@ -31,8 +25,11 @@ class UserCenterController extends Controller {
     	        res(0, '用户不允许登陆');
     	    }
     	    if($key = $this->adminModel->setUserSSO($uid)){
-    	        $referer && $referer .= (strpos($referer, '?')===false ? '?' : '&').'u='.$key;
-    	        res(1, '登陆成功', $referer);
+    	    	$mark = I('post.m');
+    	    	if($mark!='mark'){
+    	        	$referer && $referer .= (strpos($referer, '?')===false ? '?' : '&').'u='.$key;
+    	        	res(1, '登陆成功', $referer,$key);
+    	    	}
     	    }
     	    res(0, '登陆失败');
     	}else{
