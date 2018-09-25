@@ -33,6 +33,8 @@ class IndexController extends Controller {
     	    $res['width'] = $arr[$prefix.'0']['width'];
     	    $res['height'] = $arr[$prefix.'0']['height'];
     	}
+    	//echo '<pre/>';
+    	//print_r($res);
     	if($res){
     	   echo json_encode($res);
     	}else{
@@ -75,8 +77,8 @@ class IndexController extends Controller {
             			'height'=>$matches['height']
             	);
         }
-        //echo "<pre/>";
-       // var_dump($rs);
+        //echo '<pre/>';
+        //print_r($res);
         if($res){
             echo json_encode($res);
         }else{
@@ -139,7 +141,7 @@ class IndexController extends Controller {
             );
         }
         //echo "<pre/>";
-        //print_r($rsArr);exit;
+        //print_r($res);exit;
         if($res){
             echo json_encode($res);
         }else{
@@ -177,6 +179,7 @@ class IndexController extends Controller {
     	$res['img_url'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['URL'];
     	$res['clickUrl'] = $val['Ad']['InLine']['NonLinearAds']['NonLinear']['NonLinearClickThrough']['URL'];
     	//echo "<pre/>";
+    	//print_r($res);
     	if($res){
     	    echo json_encode($res);
     	}else{
@@ -213,6 +216,7 @@ class IndexController extends Controller {
         $res['text'] = $arr[$prefix.'0']['text'];
         $res['length'] = mb_strlen($res['text'], 'utf8');
         //echo "<pre/>";
+        //print_r($res);
         if($res){
             echo json_encode($res);
         }else{

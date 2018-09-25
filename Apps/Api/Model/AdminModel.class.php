@@ -20,7 +20,7 @@ class AdminModel extends Model{
             $password = I('post.password');
         }
         $passwordMd5 = $this->encriptPassword($password);
-        if($arrId = $this->where("`user_name`='{$user_name}' AND `password`='{$passwordMd5}'")->field(array('id'))->find()){
+        if($arrId = $this->where("`user_name`='{$user_name}' AND `password`='{$passwordMd5}'")->getField('id', 1)){
             return $arrId['id'];
         }else{
             return 0;
