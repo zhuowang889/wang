@@ -67,9 +67,18 @@
 						if(captcha.length < 1){
 							layer.tips('请输入验证码', '#captcha');return;
 						}
-						var ssoUrl = "{:U('Login/ssoUrl')}"
-						$.post(ssoUrl,{name:name,pwd:pwd});
-						
+						//单点登录start
+						$.ajax({
+							type:'POST',
+						    crossDomain:true,
+			                xhrFields: {
+			                      withCredentials: true
+			               },
+							url:'http://10.8.102.37:8009/Api/UserCenter/index',
+						    data:{user_name:name,password:pwd},
+						    dataType: "json"
+						});
+						//单点登录end
 						var url = "{:U('Login/doLogin')}";
 						$.post(url,{name:name,pwd:pwd,captcha:captcha},function(data){
 							if(data.status){

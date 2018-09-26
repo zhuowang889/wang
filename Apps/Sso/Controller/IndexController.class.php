@@ -13,7 +13,7 @@ class IndexController extends CommonController {
 	}
     public function index()
     {
-    	//header("Content-Type: text/html; charset=UTF-8");
+    	
         $user_info = session('user_info');
         /* @var $admin_auth_group_access_model \Admin\Model\AuthGroupAccessModel */
         $admin_auth_group_access_model = D('AuthGroupAccess');

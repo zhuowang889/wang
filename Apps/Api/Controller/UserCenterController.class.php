@@ -16,11 +16,17 @@ class UserCenterController extends Controller {
 	 */
     public function index()
     {
+    	header("Access-Control-Allow-Credentials: true");
+    	header('Access-Control-Allow-Origin:http://10.8.66.111:8009'); 
+    	 if(cookie('ssouser')){
+    	  $result = ['code'=>1,'msg'=>'登录成功!'];
+    	  $arr = S(cookie('ssouser'));
+    	  echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
+    	  die;
+    	}  
         //模拟数据，待删除
-        //$_POST = ['user_name'=>'admin', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
+       // $_POST = ['user_name'=>'zcj', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
     	$referer = I('post.referer', '', 'trim');
-    	echo 'kkkkkkkkkkkkkkkkkk';
-    	die('aaaaaaaaaaaaaggggggggggggggggggggg');
     	if($uid = $this->adminModel->checkPassword()){
     	    $status = $this->adminModel->getUserinfo($uid, 'status');
     	    if($status == 2){
