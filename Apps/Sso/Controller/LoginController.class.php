@@ -43,46 +43,10 @@ class LoginController extends Controller {
         }
         
         $admin_user_model->updateLoginTime($user_info['id']);
-        //为单点登录保存cookie
         
         session('user_info', $user_info);
         $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！'));
         
-    }
-    public function ssoUrl(){
-    	//$name = I('post.name');
-    	//$pwd = I('post.pwd');
-    	 echo 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
-    	//$url = 'http://localhost:8009/Api/userCenter/index.html';
-    	 $url = 'http://localhost:8009/Api/userCenter/index';
-    	$param = ['user_name'=>$name,'password'=>$pwd];
-    	//$res = $this->curlPost($url, $param);
-    	$ch = curl_init();
-    	curl_setopt($ch, CURLOPT_POST, 1);
-    	curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-    	//curl_setopt($ch, CURLOPT_POSTFIELDS, ['name'=>'admin','pwd'=>'123456']);
-    	curl_setopt($ch, CURLOPT_URL, $url);
-    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    	curl_setopt($ch, CURLOPT_HEADER, 0);
-    	$output = curl_exec($ch);
-    	curl_close($ch);
-    	dump($output);
-    }
-    public function zcj(){
-    	echo 'aaaaaaaaaaaaa';
-    	$url = 'http://localhost:8009/Api/userCenter/index';
-    	$param = ['user_name'=>'admin','password'=>'123456'];
-    	//$res = $this->curlPost($url, $param);
-    	$ch = curl_init();
-    	curl_setopt($ch, CURLOPT_POST, 1);
-    	curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
-    	//curl_setopt($ch, CURLOPT_POSTFIELDS, ['name'=>'admin','pwd'=>'123456']);
-    	curl_setopt($ch, CURLOPT_URL, $url);
-    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    	curl_setopt($ch, CURLOPT_HEADER, 0);
-    	$output = curl_exec($ch);
-    	curl_close($ch);
-    	dump($output);
     }
     
     /**
