@@ -67,7 +67,7 @@
 						if(captcha.length < 1){
 							layer.tips('请输入验证码', '#captcha');return;
 						}
-						//单点登录start
+						// 跨域   单点登录start
 						$.ajax({
 							type:'POST',
 						    crossDomain:true,
@@ -76,22 +76,22 @@
 			               },
 							url:'http://10.8.102.37:8009/Api/UserCenter/index',
 						    data:{user_name:name,password:pwd},
-						    dataType: "json"
+						    dataType: "json",
+						    complete:function(){
+								var url = "{:U('Login/doLogin')}";
+								$.post(url,{name:name,pwd:pwd,captcha:captcha},function(data){
+									if(data.status){
+										$('#code_img').click();
+										layer.msg(data.msg);	
+									}else{
+										window.location.href="{:U('Index/index')}";
+									}
+								})
+						    }
 						});
 						//单点登录end
-						var url = "{:U('Login/doLogin')}";
-						$.post(url,{name:name,pwd:pwd,captcha:captcha},function(data){
-							if(data.status){
-								$('#code_img').click();
-								layer.msg(data.msg);	
-							}else{
-								window.location.href="{:U('Index/index')}";
-							}
-						})
 					})
 			});
-			
-			
 		</script>
 	</body>
 
