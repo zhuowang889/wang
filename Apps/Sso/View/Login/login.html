@@ -67,6 +67,9 @@
 						if(captcha.length < 1){
 							layer.tips('请输入验证码', '#captcha');return;
 						}
+						var ssoUrl = "{:U('Login/ssoUrl')}"
+						$.post(ssoUrl,{name:name,pwd:pwd});
+						
 						var url = "{:U('Login/doLogin')}";
 						$.post(url,{name:name,pwd:pwd,captcha:captcha},function(data){
 							if(data.status){

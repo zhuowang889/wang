@@ -19,17 +19,16 @@ class UserCenterController extends Controller {
         //模拟数据，待删除
         //$_POST = ['user_name'=>'admin', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
     	$referer = I('post.referer', '', 'trim');
+    	echo 'kkkkkkkkkkkkkkkkkk';
+    	die('aaaaaaaaaaaaaggggggggggggggggggggg');
     	if($uid = $this->adminModel->checkPassword()){
     	    $status = $this->adminModel->getUserinfo($uid, 'status');
     	    if($status == 2){
     	        res(0, '用户不允许登陆');
     	    }
     	    if($key = $this->adminModel->setUserSSO($uid)){
-    	    	$mark = I('post.m');
-    	    	if($mark!='mark'){
     	        	$referer && $referer .= (strpos($referer, '?')===false ? '?' : '&').'u='.$key;
     	        	res(1, '登陆成功', $referer,$key);
-    	    	}
     	    }
     	    res(0, '登陆失败');
     	}else{
