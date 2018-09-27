@@ -20,6 +20,8 @@ class UserCenterController extends Controller {
     	header('Access-Control-Allow-Origin:http://10.8.66.111:8009'); 
     	 if(cookie('ssouser')){
     	 	$arr = S(cookie('ssouser'));
+    	 	$user_name = I('post.user_name');
+    	 	if($user_name==$arr['user_name'] || !$user_name){
     	 	//单点退出只是加了一个标识，并没有消除cookie
     	 	$logout = I('post.login')?I('post.login'):'';
     	 	if($logout=='logout'){//退出
@@ -35,23 +37,28 @@ class UserCenterController extends Controller {
     	 	}
     	  echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
     	  die;
+    	 }else{
+    	 	//===============
+    	 	//模拟数据，待删除
+    	 	// $_POST = ['user_name'=>'zcj', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
+    	 	$referer = I('post.referer', '', 'trim');
+    	 	if($uid = $this->adminModel->checkPassword()){
+    	 		$status = $this->adminModel->getUserinfo($uid, 'status');
+    	 		if($status == 2){
+    	 			res(0, '用户不允许登陆');
+    	 		}
+    	 		if($key = $this->adminModel->setUserSSO($uid)){
+    	 			$referer && $referer .= (strpos($referer, '?')===false ? '?' : '&').'u='.$key;
+    	 			res(1, '登陆成功', $referer,$key);
+    	 		}
+    	 		res(0, '登陆失败');
+    	 	}else{
+    	 		res(0, '用户名或密码错误');
+    	 	}
+    	 	//==================
+    	 }
     	}  
-        //模拟数据，待删除
-       // $_POST = ['user_name'=>'zcj', 'password'=>'123456', 'referer'=>'http://www.sohu.com'];
-    	$referer = I('post.referer', '', 'trim');
-    	if($uid = $this->adminModel->checkPassword()){
-    	    $status = $this->adminModel->getUserinfo($uid, 'status');
-    	    if($status == 2){
-    	        res(0, '用户不允许登陆');
-    	    }
-    	    if($key = $this->adminModel->setUserSSO($uid)){
-    	        	$referer && $referer .= (strpos($referer, '?')===false ? '?' : '&').'u='.$key;
-    	        	res(1, '登陆成功', $referer,$key);
-    	    }
-    	    res(0, '登陆失败');
-    	}else{
-    	    res(0, '用户名或密码错误');
-    	}
+        
     }
     
     /**
