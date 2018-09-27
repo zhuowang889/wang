@@ -19,8 +19,20 @@ class UserCenterController extends Controller {
     	header("Access-Control-Allow-Credentials: true");
     	header('Access-Control-Allow-Origin:http://10.8.66.111:8009'); 
     	 if(cookie('ssouser')){
-    	  $result = ['code'=>1,'msg'=>'登录成功!'];
-    	  $arr = S(cookie('ssouser'));
+    	 	$arr = S(cookie('ssouser'));
+    	 	//单点退出只是加了一个标识，并没有消除cookie
+    	 	$logout = I('post.login')?I('post.login'):'';
+    	 	if($logout=='logout'){//退出
+    	 		$arr['login'] = 'logout';
+    	 		$k = cookie(ssouser);
+    	 		S($k, $arr, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre]);
+    	 		$result = ['code'=>-1,'msg'=>'退出成功!'];
+    	 	}elseif($logout=='loging'){//登录
+    	 		$arr['login'] = 'loging';
+    	 		$k = cookie(ssouser);
+    	 		S($k, $arr, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre]);
+    	 		$result = ['code'=>1,'msg'=>'登录成功!'];
+    	 	}
     	  echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
     	  die;
     	}  
