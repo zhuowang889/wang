@@ -17,7 +17,8 @@ class UserCenterController extends Controller {
     public function index()
     {
     	header("Access-Control-Allow-Credentials: true");
-    	header('Access-Control-Allow-Origin:http://10.8.66.111:8009'); 
+    	//header('Access-Control-Allow-Origin:http://10.8.66.111:8009'); 
+    	header("Access-Control-Allow-Origin:{$_SERVER['HTTP_ORIGIN']}");
     	 //if(cookie('ssouser')){
     	 	$user_name = I('post.user_name');
     	 	$password = I('post.password');
@@ -38,9 +39,10 @@ class UserCenterController extends Controller {
 	    	 	}
 	    	 	
 	    	 	if($logout){
+	    	 		echo '//这个值要保留,删除注释';
 	    	 		echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
 	    	 	}else{
-	    	 		//这里只是方便测试拿取cookie，正式上线需要删除这个区间，因为正式上线会传参数login
+	    	 		echo '//这里只是方便测试拿取cookie，正式上线需要删除这个区间，因为正式上线会传参数login';
 	    	 		echo json_encode($arr,JSON_UNESCAPED_UNICODE);
 	    	 	}
 	    	  die;
