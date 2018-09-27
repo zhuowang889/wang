@@ -55,7 +55,7 @@ class AdminModel extends Model{
     public function setUserSSO(int $uid){
         $user_name = $this->getUserinfo($uid, 'user_name');
         $key = $this->getSSOkey($user_name, $uid);
-        $res = json_encode(array('id'=>$uid, 'user_name'=>$user_name));
+        $res = json_encode(array('id'=>$uid, 'user_name'=>$user_name,'login'=>'loging'));
         if(S($key, $res, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre])){
         	//后期加上的cookie,完善单点登录
         	cookie('ssouser',$key,0);

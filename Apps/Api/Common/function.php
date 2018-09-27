@@ -23,6 +23,7 @@ function res($code_data, $msg = '', $referer = '',$key = ''){
     $res['msg'] = $msg;
     $res['id'] = $userInfo['id'];
     $res['username'] = $userInfo['user_name'];
+    $res['login'] = 'loging';
     echo json_encode($res,JSON_UNESCAPED_UNICODE);
    exit;
 }
