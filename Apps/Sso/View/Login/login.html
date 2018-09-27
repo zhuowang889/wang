@@ -68,17 +68,18 @@
 							layer.tips('请输入验证码', '#captcha');return;
 						}
 						// 跨域   单点登录start
+						var setSSOkeyUrl = "<?php echo C('http_origins')[0];?>/Api/UserCenter/index";
 						$.ajax({
-							type:'POST',
-						    crossDomain:true,
+							type: 'POST',
+						    crossDomain: true,
 			                xhrFields: {
 			                      withCredentials: true
 			               },
-							url:'http://10.8.102.37:8009/Api/UserCenter/index',
-						    data:{user_name:name,password:pwd},
+							url: setSSOkeyUrl,
+						    data: {user_name:name,password:pwd},
 						    dataType: "json",
-						    complete:function(){
-								var url = "{:U('Login/doLogin')}";
+						    complete: function(){
+								var ssoUrl = "{:U('Login/doLogin')}";
 								$.post(url,{name:name,pwd:pwd,captcha:captcha},function(data){
 									if(data.status){
 										$('#code_img').click();

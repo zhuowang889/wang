@@ -1,0 +1,98 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/Public/plugins/layui/css/layui.css" media="all" />
+  <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+ 
+<form class="layui-form" action="">
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">手机</label>
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input" value="<?php echo ($info['phone']?$info['phone']:''); ?>">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">邮箱</label>
+      <div class="layui-input-inline">
+        <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input" value="<?php echo ($info['email']?$info['email']:''); ?>">
+      </div>
+    </div>
+  </div>
+   
+   <div class="layui-form-item">
+    <label class="layui-form-label">地址</label>
+    <div class="layui-input-block">
+      <input type="text" name="addr"  lay-verify="addr" autocomplete="off"  class="layui-input" value="<?php echo ($info['addr']?$info['addr']:''); ?>">
+    </div>
+  </div>
+      <input type="hidden" name="id"   value="<?php echo ($id); ?>"  class="layui-input">
+  <div class="layui-form-item">
+    <label class="layui-form-label">性别</label>
+    <div class="layui-input-block">
+      <input type="radio" name="sex" value="1" title="男"  <?php if($info['gender'] == 1): ?>checked=""<?php endif; ?>>
+      <input type="radio" name="sex" value="0" title="女"  <?php if($info['gender'] == 0): ?>checked=""<?php endif; ?>>
+    </div>
+  </div>
+  <div class="layui-form-item layui-form-text">
+    <label class="layui-form-label">个人简介</label>
+    <div class="layui-input-block">
+      <textarea name="intro" placeholder="请输入内容" class="layui-textarea"><?php if(!empty($info['intro'])): echo ($info["intro"]); else: ?>这家伙很懒,什么都没有留下<?php endif; ?></textarea>
+    </div>
+  </div>
+  
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit="" lay-filter="info">立即提交</button>
+     
+    </div>
+  </div>
+</form>
+          
+<script type="text/javascript" src="/Public/plugins/layui/layui.js"></script>
+<script>
+layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form()
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate
+  ,$ = layui.jquery;
+  
+  //自定义验证规则
+  form.verify({
+    addr: function(value){
+        if(value.length < 8){
+            return '地址至少得8个字符啊';
+          }
+        }
+  });
+  
+  //监听提交
+  form.on('submit(info)', function(data){
+	  var url = "<?php echo U('Sso/user/updateUserFile');?>";
+	  $.post(url,data.field,function(d){
+		  if(d=="更新失败"){
+			  layer.msg(d);
+		  }else if(d=="更新成功"){
+			  layer.msg(d);
+			  var url = "<?php echo U('Sso/UserCenter/index');?>";
+			  location.href = url;
+		  }
+		  
+	  });
+    return false;
+  });
+  
+  
+});
+</script>
+
+</body>
+</html>

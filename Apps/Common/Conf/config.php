@@ -35,4 +35,6 @@ return array(
 		'REDIS_PERSISTENT'=>false,//是否长连接 false=短连接
 		'REDIS_AUTH'=>'',//AUTH认证密码
 		'DATA_CACHE_TIME'=> 0,      // 数据缓存有效期 0表示永久缓存
+		/*跨域http_origins*/
+        'HTTP_ORIGINS' => ['http://10.8.102.37:8009','http://10.8.66.111:8009','http://127.0.0.1:8080','http://127.0.0.1:8009'],
 );

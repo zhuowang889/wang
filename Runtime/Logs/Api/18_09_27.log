@@ -1,0 +1,91 @@
+[ 2018-09-27T09:25:39+08:00 ] 10.8.66.111 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0016s ]
+
+[ 2018-09-27T09:25:42+08:00 ] 10.8.66.111 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0005s ]
+
+[ 2018-09-27T09:33:13+08:00 ] 10.8.66.111 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0009s ]
+
+[ 2018-09-27T09:48:25+08:00 ] 10.8.66.111 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `zw_admin` WHERE ( `user_name`='admin' AND `password`='e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Illegal string offset 'id' D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 24 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 34 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `status` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::setUserSSO() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 38 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 55 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Model\AdminModel.class.php on line 56 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `user_name` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-09-27T09:52:13+08:00 ] 10.8.66.111 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0077s ]
+SQL: SELECT `id` FROM `zw_admin` WHERE ( `user_name`='admin' AND `password`='e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Illegal string offset 'id' D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 24 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 34 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `status` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::setUserSSO() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 38 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 55 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Model\AdminModel.class.php on line 56 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `user_name` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-27T09:53:48+08:00 ] 10.8.66.111 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0024s ]
+SQL: SELECT `id` FROM `zw_admin` WHERE ( `user_name`='admin' AND `password`='e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'id' D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 24 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 34 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `status` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::setUserSSO() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 38 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 55 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Model\AdminModel.class.php on line 56 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `user_name` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-09-27T09:58:35+08:00 ] 127.0.0.1 /Api/UserCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `zw_admin` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `zw_admin` WHERE ( `user_name`='admin' AND `password`='e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'id' D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 24 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 34 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `status` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::setUserSSO() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Controller\UserCenterController.class.php on line 38 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 55 行.
+NOTIC: [4096] Argument 1 passed to Api\Model\AdminModel::getUserinfo() must be an instance of Api\Model\int, string given, called in D:\www1\wang\Apps\Api\Model\AdminModel.class.php on line 56 and defined D:\www1\wang\Apps\Api\Model\AdminModel.class.php 第 109 行.
+SQL: SELECT `user_name` FROM `zw_admin` WHERE ( `id`='1' ) LIMIT 1   [ RunTime:0.0002s ]
+
