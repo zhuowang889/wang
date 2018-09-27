@@ -18,31 +18,32 @@ class UserCenterController extends Controller {
     {
     	header("Access-Control-Allow-Credentials: true");
     	header('Access-Control-Allow-Origin:http://10.8.66.111:8009'); 
-    	 if(cookie('ssouser')){
-    	 	$arr = S(cookie('ssouser'));
+    	 //if(cookie('ssouser')){
     	 	$user_name = I('post.user_name');
-    	 	if($user_name==$arr['user_name'] || !$user_name){
-    	 	//单点退出只是加了一个标识，并没有消除cookie
-    	 	$logout = I('post.login')?I('post.login'):'';
-    	 	if($logout=='logout'){//退出
-    	 		$arr['login'] = 'logout';
-    	 		$k = cookie(ssouser);
-    	 		S($k, $arr, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre]);
-    	 		$result = ['code'=>-1,'msg'=>'退出成功!'];
-    	 	}elseif($logout=='loging'){//登录
-    	 		$arr['login'] = 'loging';
-    	 		$k = cookie(ssouser);
-    	 		S($k, $arr, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre]);
-    	 		$result = ['code'=>1,'msg'=>'登录成功!'];
-    	 	}
-    	 	
-    	 	if($logout){
-    	 		echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
-    	 	}else{
-    	 		//这里只是方便测试拿取cookie，正式上线需要删除这个区间，因为正式上线会传参数login
-    	 		echo json_encode($arr,JSON_UNESCAPED_UNICODE);
-    	 	}
-    	  die;
+    	 	$password = I('post.passowrd');
+    	 	if(!$user_name || !$password){
+	    	 	$arr = S(cookie('ssouser'));
+	    	 	//单点退出只是加了一个标识，并没有消除cookie
+	    	 	$logout = I('post.login')?I('post.login'):'';
+	    	 	if($logout=='logout'){//退出
+	    	 		$arr['login'] = 'logout';
+	    	 		$k = cookie(ssouser);
+	    	 		S($k, $arr, ['expire'=>$this->adminModel->loginExpire, 'data_cache_prifix'=>$this->adminModel->SSOpre]);
+	    	 		$result = ['code'=>-1,'msg'=>'退出成功!'];
+	    	 	}elseif($logout=='loging'){//登录
+	    	 		$arr['login'] = 'loging';
+	    	 		$k = cookie(ssouser);
+	    	 		S($k, $arr, ['expire'=>$this->adminModel->loginExpire, 'data_cache_prifix'=>$this->adminModel->SSOpre]);
+	    	 		$result = ['code'=>1,'msg'=>'登录成功!'];
+	    	 	}
+	    	 	
+	    	 	if($logout){
+	    	 		echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
+	    	 	}else{
+	    	 		//这里只是方便测试拿取cookie，正式上线需要删除这个区间，因为正式上线会传参数login
+	    	 		echo json_encode($arr,JSON_UNESCAPED_UNICODE);
+	    	 	}
+	    	  die;
     	 }else{
     	 	//===============
     	 	//模拟数据，待删除
@@ -63,7 +64,7 @@ class UserCenterController extends Controller {
     	 	}
     	 	//==================
     	 }
-    	}  
+    	//}  
         
     }
     
