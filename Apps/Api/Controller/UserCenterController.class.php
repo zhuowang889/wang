@@ -35,7 +35,13 @@ class UserCenterController extends Controller {
     	 		S($k, $arr, ['expire'=>$this->loginExpire, 'data_cache_prifix'=>$this->SSOpre]);
     	 		$result = ['code'=>1,'msg'=>'登录成功!'];
     	 	}
-    	  echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
+    	 	
+    	 	if($logout){
+    	 		echo json_encode(array_merge($result,$arr),JSON_UNESCAPED_UNICODE);
+    	 	}else{
+    	 		//这里只是方便测试拿取cookie，正式上线需要删除这个区间，因为正式上线会传参数login
+    	 		echo json_encode($arr,JSON_UNESCAPED_UNICODE);
+    	 	}
     	  die;
     	 }else{
     	 	//===============
