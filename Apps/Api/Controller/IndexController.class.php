@@ -11,7 +11,7 @@ class IndexController extends Controller {
     {
     	$zones = I('get.zoneId');
     	//正式部署要删除掉具体参数
-    	$zones = 7;
+    	!$zones && $zones = 7;
     	$prefix = 'revive-0-';
     	$loc = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     	$referer = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -27,11 +27,11 @@ class IndexController extends Controller {
     	$html = $arr[$prefix.'0']['html'];
     	$matches = array();
     	$res = array();
-    	echo "<pre/>";
-    	var_dump($html);
+    	//echo "<pre/>";
+    	//var_dump($html);
     	
     	if(preg_match("/href='([^']+)'.+?src='([^']+)'.+?src='([^']+)'/", $html, $matches)){
-    		var_dump($matches);
+    		//var_dump($matches);
     	    $res['clickUrl'] = $matches[1];
     	    $res['imgUrl'] = $matches[2];
     	    $res['callBackParam'] = $matches[3];
@@ -39,18 +39,20 @@ class IndexController extends Controller {
     	    $res['height'] = $arr[$prefix.'0']['height'];
     	}
     	$arr = [];
-    	echo '============================================';
-    	$eof = PHP_EOF;
+    	//echo '============================================';
+    	//$eof = PHP_EOF;
     	//if(preg_match_all("/http:[\/]{2}[a-z]+[.]{1}[a-z\d\-]+[.]{1}[a-z\d]*[\/]*[A-Za-z\d]*[\/]*[A-Za-z\d]*/",$html,$arr)){
     	//if(preg_match_all("/http:[\/]{2}(.*?)/",$html,$arr)){
     	preg_match('/^([^\s<]+)[.\s]+/', $html, $arr);
-    	$res['clickUrl3'] = $arr[0];
-    	var_dump($arr);
+    	$clickUrl3 = $arr[0];
+    	$res['clickUrl'] .= '&clickUrl3='.urlencode($clickUrl3);
+    	//var_dump($arr);
     	$result = [];
     	preg_match('/([^>]+)$/', $html, $result);
-    	var_dump($result);
+    	//var_dump($result);
     	$res['callBackParam3'] = $result[0];
-    	var_dump($res);
+    	echo "<pre/>";
+    	var_dump($res);exit;
     	if($res){
     	   echo json_encode($res);
     	}else{
@@ -239,6 +241,7 @@ class IndexController extends Controller {
     //回调接口
     function callBack(){
     	$param = I('post.callBackParam');
+    	$param3 = I('post.callBackParam3');
     	$token = I('post.token');
     	$header = array("x-access-token:$token");
     	//$header = array("x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYWY0MTlmOGFkYTVlNzM3YmI1YWQwMSIsImlhdCI6MTUzODIxMjMyMywiZXhwIjoxNTM4MjE1OTIzfQ.JZ8TCjqLfX2yyoJ7hQGDpwgqeiOVHt9hRQxNOs9pn88");
@@ -249,11 +252,13 @@ class IndexController extends Controller {
     	if($res['code']===1){
     		//$param = 'http://localhost:8000/www/delivery/lg.php?bannerid=2&campaignid=2&zoneid=2&loc=http%3A%2F%2Flocalhost%2Fdemo.html&cb=dcf03d82cc';
     		$this->imgGet($param);
+    		//请求第三方统计
+    		http_call($param3);
     		$msg = array('code'=>1,'msg'=>'回调成功');
-    		echo json_encode($msg);die;
+    		echo json_encode($msg, JSON_UNESCAPED_UNICODE);die;
     	}else{
-    		$msg = array('code'=>0,'msg'=>'无效token');
-    		echo json_encode($msg);
+    	    $msg = array('code'=>0,'msg'=>'无效token');
+    	    echo json_encode($msg, JSON_UNESCAPED_UNICODE);
     	}
     }
     //post请求

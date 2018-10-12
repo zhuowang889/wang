@@ -27,3 +27,32 @@ function res($code_data, $msg = '', $referer = '',$key = ''){
     echo json_encode($res,JSON_UNESCAPED_UNICODE);
    exit;
 }
+
+/**
+ * curl 请求
+ * @param string $url
+ * @param boolean $post
+ * @param string $header
+ * @param number $time
+ * @param array $data
+ * @return mixed
+ */
+function http_call($url, $post = false, $header = '', $time=5, $data = []){
+    $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_URL, $url);
+    if($header){
+        curl_setopt($ch, CURLOPT_HEADER, $header);
+    }
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    if($post){
+        curl_setopt($ch, CURLOPT_POST, true);
+        $data && curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    }
+    curl_setopt($ch, CURLOPT_TIMEOUT, $time);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+    
+    $res = curl_exec($ch);
+    return $res;
+}
