@@ -4,6 +4,7 @@ use Think\Controller;
 
 class IndexController extends Controller {
     public $adServerUrl = 'http://101.132.106.202/www';
+    //public $adServerUrl = 'http://localhost:8000/www';
     
 	//接口请求图片广告
     public function index()
@@ -26,13 +27,30 @@ class IndexController extends Controller {
     	$html = $arr[$prefix.'0']['html'];
     	$matches = array();
     	$res = array();
+    	echo "<pre/>";
+    	var_dump($html);
+    	
     	if(preg_match("/href='([^']+)'.+?src='([^']+)'.+?src='([^']+)'/", $html, $matches)){
+    		var_dump($matches);
     	    $res['clickUrl'] = $matches[1];
     	    $res['imgUrl'] = $matches[2];
     	    $res['callBackParam'] = $matches[3];
     	    $res['width'] = $arr[$prefix.'0']['width'];
     	    $res['height'] = $arr[$prefix.'0']['height'];
     	}
+    	$arr = [];
+    	echo '============================================';
+    	$eof = PHP_EOF;
+    	//if(preg_match_all("/http:[\/]{2}[a-z]+[.]{1}[a-z\d\-]+[.]{1}[a-z\d]*[\/]*[A-Za-z\d]*[\/]*[A-Za-z\d]*/",$html,$arr)){
+    	//if(preg_match_all("/http:[\/]{2}(.*?)/",$html,$arr)){
+    	preg_match('/^([^\s<]+)[.\s]+/', $html, $arr);
+    	$res['clickUrl3'] = $arr[0];
+    	var_dump($arr);
+    	$result = [];
+    	preg_match('/([^>]+)$/', $html, $result);
+    	var_dump($result);
+    	$res['callBackParam3'] = $result[0];
+    	var_dump($res);
     	if($res){
     	   echo json_encode($res);
     	}else{
@@ -47,7 +65,7 @@ class IndexController extends Controller {
     {
     	$zoneId = I('get.zoneId');
     	//正式部署要删除掉具体参数
-    	$zoneId = 9;
+    	//$zoneId = 9;
         $params = array('zoneid'=>$zoneId,
             'layerstyle'=>'geocities',
             'align'=>'right',
@@ -92,7 +110,7 @@ class IndexController extends Controller {
     {
     	$zoneId = I('get.zoneId');
     	//正式部署要删除掉具体参数
-    	$zoneId = 13;
+    	//$zoneId = 13;
         $params = array(
             'script'=>'bannerTypeHtml:vastInlineBannerTypeHtml:vastInlineHtml',
             'format'=>'vast',
@@ -153,7 +171,7 @@ class IndexController extends Controller {
     public function suVideo(){
     	$zoneId = I('get.zoneId');
     	//正式部署要删除下面的变量
-    	$zoneId = 12;
+    	//$zoneId = 12;
     	$params = array(
     			'script'=>'bannerTypeHtml:vastInlineBannerTypeHtml:vastInlineHtml',
     			'format'=>'vast',
@@ -187,7 +205,7 @@ class IndexController extends Controller {
     public function text()
     {
     	$zones = I('get.zoneId');
-        $zones = 10;
+        //$zones = 10;
         $prefix = 'revive-0-';
         $loc = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         
@@ -212,7 +230,6 @@ class IndexController extends Controller {
         $res['callBackParam'] = $arr[$prefix.'0']['showStatisticsUrl'];
         $res['text'] = $arr[$prefix.'0']['text'];
         $res['length'] = mb_strlen($res['text'], 'utf8');
-        //echo "<pre/>";
         if($res){
             echo json_encode($res);
         }else{
@@ -224,13 +241,13 @@ class IndexController extends Controller {
     	$param = I('post.callBackParam');
     	$token = I('post.token');
     	$header = array("x-access-token:$token");
-    	$header = array("x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViOWI0OTA2ZWI5MjAwNTg4MGUyMGNkZiIsImlhdCI6MTUzNzI2MjI4OSwiZXhwIjoxNTM3MjY1ODg5fQ.GRizHT0uQKBsYz-UGGf67YrNl1ZQcQbyg__dIIE7o0Q");
-    	//测试地址
-    	$url = 'http://101.132.158.59:3000/token_api/validate_token';
+    	//$header = array("x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYWY0MTlmOGFkYTVlNzM3YmI1YWQwMSIsImlhdCI6MTUzODIxMjMyMywiZXhwIjoxNTM4MjE1OTIzfQ.JZ8TCjqLfX2yyoJ7hQGDpwgqeiOVHt9hRQxNOs9pn88");
+    	//测试地址      如何调用token验证   先走公网IP
+    	$url = 'https://token.hsh.i139.cn/token_api/validate_token';
     	$outPut = $this->httpPost($url,$header);
     	$res = json_decode($outPut,true);
     	if($res['code']===1){
-    		$param = 'http://localhost:8000/www/delivery/lg.php?bannerid=2&campaignid=2&zoneid=2&loc=http%3A%2F%2Flocalhost%2Fdemo.html&cb=dcf03d82cc';
+    		//$param = 'http://localhost:8000/www/delivery/lg.php?bannerid=2&campaignid=2&zoneid=2&loc=http%3A%2F%2Flocalhost%2Fdemo.html&cb=dcf03d82cc';
     		$this->imgGet($param);
     		$msg = array('code'=>1,'msg'=>'回调成功');
     		echo json_encode($msg);die;
