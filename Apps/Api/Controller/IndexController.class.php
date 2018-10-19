@@ -1,9 +1,11 @@
 <?php
 namespace Api\Controller;
+require 'vendor/autoload.php';
 use Think\Controller;
-
+use Api\Common;
 class IndexController extends Controller {
     public $adServerUrl = 'http://101.132.106.202/www';
+    public $piwikUrl = 'http://127.0.0.1/matomo';
     //public $adServerUrl = 'http://localhost:8000/www';
     
 	//接口请求图片广告
@@ -28,7 +30,7 @@ class IndexController extends Controller {
     	$matches = array();
     	$res = array();
     	//echo "<pre/>";
-    	//var_dump($html);
+    	//print_r($arr);exit;
     	
     	if(preg_match("/href='([^']+)'.+?src='([^']+)'.+?src='([^']+)'/", $html, $matches)){
     		//var_dump($matches);
@@ -51,8 +53,14 @@ class IndexController extends Controller {
     	preg_match('/([^>]+)$/', $html, $result);
     	//var_dump($result);
     	$res['callBackParam3'] = $result[0];
-    	echo "<pre/>";
-    	var_dump($res);exit;
+    	//echo "<pre/>";
+    	//var_dump($res);exit;
+    	/*matomo php client*/
+    	//import("Piwik.PiwikTracker");
+    	$PiwikTracker = new \PiwikTracker(1, $this->piwikUrl);
+    	$PiwikTracker->setCustomVariable(0, 'delivery', 'imageAd', 'page');
+    	$PiwikTracker->doTrackPageView($zones);
+    	/*matomo php client*/
     	if($res){
     	   echo json_encode($res);
     	}else{

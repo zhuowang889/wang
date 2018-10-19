@@ -1,0 +1,44 @@
+[
+    {
+        "name": "piwik/piwik-php-tracker",
+        "version": "1.4.1",
+        "version_normalized": "1.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/matomo-org/matomo-php-tracker.git",
+            "reference": "3b31a6366fdf1f39520d7cbf858967f309d89275"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/matomo-org/matomo-php-tracker/zipball/3b31a6366fdf1f39520d7cbf858967f309d89275",
+            "reference": "3b31a6366fdf1f39520d7cbf858967f309d89275",
+            "shasum": ""
+        },
+        "time": "2018-10-12T00:37:52+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "."
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "The Piwik Team",
+                "email": "hello@piwik.org",
+                "homepage": "http://piwik.org/the-piwik-team/"
+            }
+        ],
+        "description": "PHP Client for Piwik Analytics Tracking API",
+        "homepage": "http://piwik.org",
+        "keywords": [
+            "analytics",
+            "piwik",
+            "tracker"
+        ]
+    }
+]
