@@ -32,24 +32,33 @@ function res($code_data, $msg = '', $referer = '',$key = ''){
  * curl 请求
  * @param string $url
  * @param boolean $post
- * @param string $header
- * @param number $time
- * @param array $data
+ * @param array $info h:header,t:time,d:data,c:cookie,cf:cookiefile
  * @return mixed
  */
-function http_call($url, $post = false, $header = '', $time=5, $data = []){
+function http_call($url, $post = false, array $info = ['h'=>'','t'=>5, 'd'=>'']){
+    $info = array_merge(['h'=>'','t'=>5, 'd'=>''], $info);
     $ch = curl_init();
     
     curl_setopt($ch, CURLOPT_URL, $url);
-    if($header){
-        curl_setopt($ch, CURLOPT_HEADER, $header);
+    if($info['h']){
+        curl_setopt($ch, CURLOPT_HEADER, $info['h']);
     }
+    
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    
     if($post){
         curl_setopt($ch, CURLOPT_POST, true);
-        $data && curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        $info['d'] && curl_setopt($ch, CURLOPT_POSTFIELDS, $info['d']);
     }
-    curl_setopt($ch, CURLOPT_TIMEOUT, $time);
+    if($info['c']){
+        curl_setopt($ch, CURLOPT_COOKIE, $info['c']);
+    }
+    if($info['cf']){
+        curl_setopt($ch, CURLOPT_COOKIEFILE, $info['cf']);
+        curl_setopt($ch, CURLOPT_COOKIEJAR, $info['cf']);
+    }
+
+    curl_setopt($ch, CURLOPT_TIMEOUT, $info['t']);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
     
